@@ -3,103 +3,133 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>𓆩 WRATH 𓆪</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:700&display=swap" rel="stylesheet" />
+  <title>WRATH</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
   <style>
-    html, body {
+    /* Reset + Base */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      height: 100%;
-      font-family: 'Georgia', serif;
+    }
+
+    body {
+      font-family: 'Share Tech Mono', monospace;
       background: url('wrath-banner.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: #e6e6e6;
-    }
-
-    .overlay {
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(6px);
-      min-height: 100%;
-      padding: 60px 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .title-box {
-      text-align: center;
-      background: rgba(217, 54, 54, 0.08);
-      border: 1px solid rgba(217, 54, 54, 0.3);
-      box-shadow: 0 0 20px rgba(217, 54, 54, 0.1);
-      border-radius: 12px;
+      color: #e6e0dc;
+      overflow-x: hidden;
       padding: 40px 20px;
-      max-width: 800px;
-      width: 100%;
-      margin-bottom: 40px;
     }
 
+    .content-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      background: rgba(18, 18, 18, 0.85);
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+    }
+
+    /* Header */
     h1 {
-      font-family: 'UnifrakturCook', cursive;
-      font-size: 56px;
-      color: #d93636;
-      text-shadow: 0 0 10px #500000;
+      font-family: 'IM Fell English SC', serif;
+      font-size: 54px;
+      color: #a12020;
+      text-align: center;
+      text-shadow: 2px 2px 6px #000;
+      letter-spacing: 3px;
+      margin-bottom: 8px;
     }
 
     .tagline {
-      font-size: 20px;
-      color: #ccc;
-      margin-top: 12px;
-    }
-
-    #disqus_thread {
-      width: 100%;
-      max-width: 900px;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    footer {
-      margin-top: 40px;
+      font-size: 18px;
+      color: #c5c5c5;
       text-align: center;
-      font-size: 14px;
-      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 30px;
     }
 
-    a {
-      color: #d93636;
-      transition: all 0.2s ease-in-out;
+    /* Disqus Style */
+    #disqus_thread {
+      font-family: 'IM Fell English SC', serif;
+      font-size: 18px;
+      line-height: 1.65;
+      color: #f2eae0;
+      background: rgba(10, 10, 10, 0.7);
+      padding: 28px;
+      border-radius: 12px;
+      letter-spacing: 0.6px;
+      text-shadow: 1px 1px 2px #000;
+      box-shadow: 0 0 12px rgba(100, 0, 0, 0.6);
+      backdrop-filter: blur(3px);
+      margin-top: 40px;
     }
 
-    a:hover {
-      color: #ff4b4b;
-      text-shadow: 0 0 6px #ff4b4b;
+    #disqus_thread .post-meta,
+    #disqus_thread .author {
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 13px;
+      color: #b83e3e;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    @keyframes pulse {
-      0%, 100% { text-shadow: 0 0 10px #910000; opacity: 0.6; }
-      50% { text-shadow: 0 0 25px #ff0000; opacity: 1; }
+    #disqus_thread a {
+      color: #c53030;
+      text-decoration: none;
+      font-weight: bold;
     }
 
+    #disqus_thread a:hover {
+      color: #ff4343;
+      text-shadow: 0 0 6px #ff4343;
+    }
+
+    #disqus_thread blockquote {
+      border-left: 3px solid #b83e3e;
+      padding-left: 14px;
+      font-style: italic;
+      color: #d2c7ba;
+    }
+
+    /* Mobile */
     @media (max-width: 600px) {
-      h1 { font-size: 38px; }
-      .tagline { font-size: 16px; }
-      .title-box { padding: 20px; }
+      body {
+        padding: 20px 10px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      .tagline {
+        font-size: 15px;
+        letter-spacing: 1px;
+      }
+
+      .content-wrapper {
+        padding: 24px 18px;
+      }
+
+      #disqus_thread {
+        font-size: 16px;
+        padding: 18px;
+      }
     }
   </style>
 </head>
 <body>
+  <div class="content-wrapper">
+    <h1>𓆩 WRATH 𓆪</h1>
+    <div class="tagline">Drop truth. Leave marks. Fade never.</div>
 
-  <div class="overlay">
-
-    <!-- Title -->
-    <div class="title-box">
-      <h1>𓆩 WRATH 𓆪</h1>
-      <div class="tagline">Speak freely. Break chains. Burn softly. No rules — just release.</div>
-    </div>
-
-    <!-- Disqus Chat -->
+    <!-- Disqus Comment Section -->
     <div id="disqus_thread"></div>
     <script>
       var disqus_config = function () {
@@ -109,27 +139,14 @@
 
       (function () {
         var d = document, s = d.createElement('script');
-        s.src = 'https://wrath-2.disqus.com/embed.js';
+        s.src = 'https://wrath-2.disqus.com/embed.js';  // make sure your Disqus shortname is correct
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
       })();
     </script>
-    <noscript>
-      Please enable JavaScript to view the 
+    <noscript>Please enable JavaScript to view the 
       <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
     </noscript>
-
-    <!-- Footer -->
-    <footer>
-      &copy; 2025 𓆩 WRATH 𓆪 Chatroom. Forged in fire. Fueled by fury.
-    </footer>
-
   </div>
-
-  <!-- Ambient Audio -->
-  <audio autoplay loop hidden>
-    <source src="https://cdn.pixabay.com/download/audio/2023/03/02/audio_e09d61701f.mp3" type="audio/mp3" />
-  </audio>
-
 </body>
 </html>
